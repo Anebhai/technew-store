@@ -1,11 +1,15 @@
-import React from 'react'
+import React from "react";
+import ContactBcg from "../images/contactBcg.jpeg";
+import Hero from "../components/Hero";
+import Contact from "../components/Contactpage/Contact";
 
 const ContactPage = () => {
- return (
-  <>
-   <h1>hello from contact pages</h1>
-  </>
- )
-}
+  return (
+    <>
+      <Hero img={ContactBcg} />
+      <Contact />
+    </>
+  );
+};
 
-export default ContactPage
+export default ContactPage;

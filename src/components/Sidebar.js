@@ -42,6 +42,7 @@ const SideWrapper = styled.nav`
   border-right: 4px solid var(--primaryColor);
   transition: var(--mainTransition);
   transform: ${(props) => (props.show ? "translateX(0)" : "translateX(-100%)")};
+  font-family: "Montserrat", sans-serif;
 
   ul {
     list-style-type: none;
@@ -60,7 +61,7 @@ const SideWrapper = styled.nav`
 
   .sidebar-link:hover {
     background: var(--primaryColor);
-    color: var(--mainWhite);
+    color: var(--mainwhite);
     padding: 0.5rem 2.5rem 0.5rem 3.5rem;
     text-decoration: none;
   }

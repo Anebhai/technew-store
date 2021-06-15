@@ -1,0 +1,39 @@
+import React from "react";
+import styled from "styled-components";
+import mainBcg from "../images/mainBcg.jpeg";
+
+export default function Hero({ children, title, img, max }) {
+  return (
+    <HeroWrapper max={max} img={img}>
+      <div className="banner">
+        <h1 className="title">{title} </h1>
+        {children}
+      </div>
+    </HeroWrapper>
+  );
+}
+
+const HeroWrapper = styled.div`
+  text-align: center;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  min-height: ${(props) => (props.max ? "100vh" : "60vh")};
+  background: linear-gradient(var(--primaryRGBA), var(--primaryRGBA)),
+    url(${(props) => props.img}) center/cover no-repeat;
+  color: var(--mainwhite);
+  .title {
+    padding: 2rem;
+    font-size: 3.5rem;
+    text-shadow: 4px 4px 2px rgba(0, 0, 0.3);
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    font-family: "Montserrat", sans-serif !important;
+    font-weight: bold;
+  }
+`;
+
+Hero.defaultProps = {
+  img: mainBcg,
+};

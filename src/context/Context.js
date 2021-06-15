@@ -1,5 +1,6 @@
 import React, { Component, createContext } from "react";
 import { linkData } from "./linkData";
+import { socialData } from "./socialData";
 
 const ProductContext = createContext();
 
@@ -9,6 +10,8 @@ class ProductProvider extends Component {
     sidecartOpen: false,
     cartItems: 0,
     links: linkData,
+    socialLinks: socialData,
+    cart: [],
   };
   handleSidebar = () => {
     this.setState({ sidebarOpen: !this.state.sidebarOpen });
@@ -30,7 +33,7 @@ class ProductProvider extends Component {
         value={{
           ...this.state,
           handleSidebar: this.handleSidebar,
-          handleSideCart: this.handleSidecart,
+          handleSidecart: this.handleSidecart,
           openCart: this.openCart,
           closeCart: this.closeCart,
         }}
